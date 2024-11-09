@@ -1,0 +1,45 @@
+#Question{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    top: 10px;
+    position: absolute;
+    left: 40%;
+    position: relative;
+    outline: 1px solid black;
+
+}
+#Image{
+    position: absolute;
+    height: 75%;
+    width: 100%;
+}
+#Text{
+
+    position:absolute;
+    text-align: center;
+    width: 100%;
+    top: 75%;
+}
+#Calculator{
+    position: relative;
+    position: absolute;
+    height: 25%;
+    width: 90%;
+    position: relative;
+}
+#Figure{
+    position: relative;
+    
+    height: 25vw;
+    width: 50vh;
+    outline: 1px solid black;
+}
+#Math{
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+}
+#subscript{
+    font-size: x-small;
+    font-family: 'Times New Roman', Times, serif;
+}

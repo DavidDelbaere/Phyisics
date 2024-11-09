@@ -1,0 +1,55 @@
+<head>
+    <link rel="stylesheet" href="/QuestionStyle.css">
+</head>
+
+<html>
+
+    <body>
+        <a href="EnergyI.html">Return</a>
+        <p>What the question looks like:<br> A block of mass m is pushed a distance x along a frictionless,<br> horizontal table by a constant applied force of magnitude Fa <br> directed at an angle θ below the horizontal in the direction of motion.<br> Determine the work done on the block by  each of the forces on the block . <br> State the work done by the net force on the block. <br> Enter your answer to the nearest tenth of joule.</p>
+        <a href="#Calculator"><button> Click to View Calculator</button></a>
+
+        <p>SOLUTION: 
+            <br>To Calculate the amount of work done, we must calculate the Net Force 
+            <br>To Do this, let us break our down our components:
+            <p>X COMPONENTS:</p>
+            <p id="Math">ΣFₓ = FₐCosθ </p>
+            <br>
+            <p>Y COMPONENTS:</p>
+            <p id="Math">ΣFᵧ = Fₙ - FₐSinθ </p>
+            <br>In this instance, there is no friction being applied to the object, so the components in the y direction do not matter
+            <br> Therefore, we can say that:
+            <p id="Math"> ΣFₙₑₜ = FₐCosθ </p>
+            <br> Now, Since the formula for work on forces is <p id="Math">W = ΣFₙₑₜ•x,</p>
+            We may write this as:
+            <p id="Math">W = x•FₐCosθ</p>
+
+        </p>
+
+        <div id="Calculator">
+            <p>CALCULATE FOR YOURSELF:</p>
+            <p>Enter Force applied (N): <input type="text" id="Fa"></p>
+            <p>Enter distance (m): <input type="text" id="x"> </p>
+            <p>Enter θ (degrees): <input type="text" id = "θ"></p>
+            <button onclick="onCalculate()">Calculate</button>
+            <p>Answer: <p id = "ans"></p> </p>
+            
+        </div>
+        <br>
+        <br>
+        <br>
+        <p>If you like this website, please follow my linkedin</p>
+    </body>
+
+    <script>
+        function onCalculate(){
+           var x =  parseFloat(document.getElementById("x").value)
+           var θ = parseFloat(document.getElementById("θ").value)
+           var Fa = parseFloat(document.getElementById("Fa").value)
+           var ans = Fa * Math.cos((Math.PI * θ) / 180)  * x
+           
+           document.getElementById("ans").innerHTML = ans   
+        }
+
+    </script>
+</html>

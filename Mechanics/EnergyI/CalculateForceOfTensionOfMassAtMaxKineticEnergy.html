@@ -1,0 +1,79 @@
+<head>
+    <link rel="stylesheet" href="/QuestionStyle.css">
+</head>
+
+<html>
+
+    <body>
+        <a href="EnergyI.html">Return</a>
+        <p>What the question looks like:
+            <br> Small mass m is suspended from an inelastic nonstretchable string
+            <br> of length L. When Initially at rest, this simple pendulum makes an angle 55° with the veritcal.
+            <br> Find the force of tension when E<sub>k</sub> is at its maximum.
+            
+        </p>
+        <a href="#Calculator"><button> Click to View Calculator</button></a>
+
+        <p>SOLUTION: 
+            <br>To Calculate the force of tension, we need to know where maximum kinetic energy resides:
+            <p id="Math">E<sub>P Top</sub> = E<sub>K Bottom</sub></p>
+            <br>We know this from the law of conservation of energy.
+            <br>Now, we can rewrite as:
+            <p id="Math">mgh = <sup>1</sup>⁄<sub>2</sub>mV<sup>2</sup></p>
+            <br>With h representing the change of height from the initial to final position.
+            <br>Rewriting to solve for velocity at this point, we get 
+            <p id="Math">V<sup>2</sup> = 2gh</p>
+            <br>When the mass is at the bottom of the system, our net force (F<sub>net</sub>) is equal to centripial Force (F<sub>c</sub>):
+            <br> Since the mass is rotating with a distance from the centre of length L, we write this as:
+            <p id="Math">F<sub>c</sub> = F<sub>net</sub></p>
+            <p id="Math">F<sub>c</sub> = m <sup>V<sup>2</sup></sup>/<sub>L</sub></p>
+            <p id="Math"><sup>mV<sup>2</sup></sup>/<sub>L</sub> = F<sub>t</sub> - F<sub>g</sub> </p>
+            <p id="Math"><sup>mV<sup>2</sup></sup>/<sub>L</sub> = F<sub>t</sub> - mg </p>
+            <p id="Math">F<sub>t</sub> = <sup>mV<sup>2</sup></sup>/<sub>L</sub> + mg </p>
+            <p id="Math">F<sub>t</sub> = m[ <sup>V<sup>2</sup></sup>/<sub>L</sub>  +g ]</p>
+            <br>Now we subsitiute V<sup>2</sup>:
+            <p id="Math">F<sub>t</sub> = m[ <sup>2gh</sup>/<sub>L</sub>  +g ]</p>
+            <p id="Math">F<sub>t</sub> = mg[ <sup>2h</sup>/<sub>L</sub>  + 1 ]</p>
+            <br>Now we must find value h, or the change of height:
+            <br>Using the diagram below, we understand that 
+            <p id="Math">Cos(θ<sub>i</sub>) = <sup>L-h</sup>/<sub>L</sub></p>
+            <div id="Figure">
+                <img id = "Image" src="Images/Figure1.CalculateForceOfTensionOfMassAtMaxKineticEnergy.png">
+                <p id="Text">Figure 1: Comparing positions using triangles </p>
+            </div>
+            <br>Rearranging, we get: 
+            <p id="Math"> 1 - Cos(θ<sub>i</sub>) = <sup>h</sup>/<sub>L</sub></p>
+            <br>Putting this back into our original formula, we find that:
+            <p id="Math">F<sub>t</sub> = mg[ 2(1 - Cos(θ<sub>i</sub>))  + 1 ]</p>
+            <br>This will give us the formula:
+            <p id="Math">F<sub>t</sub> = mg[3 - 2Cos(θ<sub>i</sub>)]</p>
+
+
+        </p>
+
+        <div id="Calculator">
+            <p>CALCULATE FOR YOURSELF (This calculator assumes Gravity to be 9.8 m/s<sup>2</sup>):</p>
+            <p>Enter mass (Kg): <input type="text" id="M"></p>
+            <p>Enter θ (degrees): <input type="text" id = "θ"></p>
+            <button onclick="onCalculate()">Calculate</button>
+            <p>Answer: <p id = "ans"></p> </p>
+            
+        </div>
+        <br>
+        <br>
+        <br>
+        <p>If you like this website, please follow my linkedin</p>
+    </body>
+
+    <script>
+        function onCalculate(){
+           var M =  parseFloat(document.getElementById("M").value)
+           var θ = parseFloat(document.getElementById("θ").value)
+
+           var ans = M*9.8 * (3-2*Math.cos((Math.PI * θ) / 180))
+           
+           document.getElementById("ans").innerHTML = ans   
+        }
+
+    </script>
+</html>
